@@ -6,16 +6,22 @@ import NewsLetter from '../components/NewsLetter'
 import FAQ from '../components/FAQ'
 import Blog from '../components/Blog'
 import Founder from '../components/Founder'
+import RecentVideos from '../components/RecentVideos'
+import Hero from '../components/Hero'
 function Home() {
+  const CHANNEL_ID = 'UCJagYE271S8A54O8vRQlOug'; // Replace with the desired YouTube channel ID
+
   return (
-    <div>
-      <Carousel />
+    <div className='bg-[#f3d4a5]'>
+      <Hero />
+      {/* <Carousel /> */}
       <TempleIntro />
       <Founder />
-      <FAQ />
-      <CTA />
+      <RecentVideos channelId={CHANNEL_ID} />
+      {/* <FAQ /> */}
+      {/* <CTA /> */}
       {/* <Blog /> */}
-      <NewsLetter />
+      {/* <NewsLetter /> */}
     </div>
   )
 }

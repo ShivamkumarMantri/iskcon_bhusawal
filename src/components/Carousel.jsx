@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import img1 from '../assets/img.jpg'; // Update this path to your local logo image
-import img2 from '../assets/mandir.jpg'; // Update this path to your local logo image
+import img1 from '../assets/img.jpg'; // Update this path to your local image
+import img2 from '../assets/mandir.jpg'; // Update this path to your local image
 
 function Carousel() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -42,14 +42,13 @@ function Carousel() {
     }, []);
 
     return (
-        <div id="default-carousel" className="relative w-full mt-5 overflow-x-hidden" data-carousel="slide">
+        <div id="default-carousel" className="relative w-full mt-5 overflow-x-hidden bg-[#f3d4a5]" data-carousel="slide">
             {/* Carousel wrapper */}
             <div className="relative h-64 md:h-96 overflow-hidden rounded-lg mx-auto max-w-full">
                 {slides.map((slide, index) => (
                     <div
                         key={index}
-                        className={`absolute block w-full h-full transition-opacity duration-700 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'
-                            }`}
+                        className={`absolute block w-full h-full transition-opacity duration-700 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`}
                         data-carousel-item
                     >
                         <img
