@@ -1,95 +1,103 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import img from "../assets/iskcon.png";
-import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className="w-full bg-gray-900 text-gray-300 py-10">
+    <footer className="w-full bg-gradient-to-b from-gray-900 via-gray-950 to-black text-gray-300 py-12">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-sm">
-          {/* Logo & Address */}
-          <div className="col-span-full lg:col-span-2">
-            <a href="#" className="flex justify-center lg:justify-start">
-              <img src={img} alt="ISKCON Bhusawal" className="w-36" />
-            </a>
-            <p className="mt-4 text-gray-400 text-center lg:text-left">
-              Sri Sri Radha Murlidhar Mandir <br />
-              Near Roop Darshan Photo Studio, Bhusawal, Maharashtra 425201
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-sm">
+          
+          {/* Logo + Address */}
+          <div className="lg:col-span-2 text-center lg:text-left">
+            <Link to="/" className="inline-flex justify-center lg:justify-start">
+              <img src={img} alt="ISKCON Bhusawal" className="w-40 hover:scale-105 transition-transform duration-300" />
+            </Link>
+            <p className="mt-4 text-gray-400 leading-relaxed">
+              <strong className="text-white">Sri Sri Radha Murlidhar Mandir</strong> <br />
+              Near Roop Darshan Photo Studio,<br />
+              Bhusawal, Maharashtra 425201
             </p>
           </div>
 
-          {/* Links Section */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-3">Quick Links</h4>
+            <h4 className="text-white font-semibold mb-4 border-b border-gray-700 pb-2">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-white">Home</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">About</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">Darshan</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">Contact</a>
-              </li>
+              <li><Link to="/" className="hover:text-indigo-400 transition-colors">Home</Link></li>
+              <li><Link to="/iskcon-bhusawal" className="hover:text-indigo-400 transition-colors">About</Link></li>
+              <li><Link to="/darshan" className="hover:text-indigo-400 transition-colors">Darshan</Link></li>
+              <li><Link to="/contact" className="hover:text-indigo-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
 
+          {/* Activities */}
           <div>
-            <h4 className="text-white font-semibold mb-3">Activities</h4>
+            <h4 className="text-white font-semibold mb-4 border-b border-gray-700 pb-2">Activities</h4>
             <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-white">Weekly Program</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">IYS Program</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">Jagruti Program</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">Pilgrimage Tour</a>
-              </li>
+              <li><Link to="/weekly-programs" className="hover:text-indigo-400 transition-colors">Weekly Program</Link></li>
+              <li><Link to="/iys" className="hover:text-indigo-400 transition-colors">IYS Program</Link></li>
+              <li><Link to="/jagruti" className="hover:text-indigo-400 transition-colors">Jagruti Program</Link></li>
+              <li><Link to="/tours" className="hover:text-indigo-400 transition-colors">Pilgrimage Tour</Link></li>
             </ul>
           </div>
 
+          {/* Other Pages */}
           <div>
-            <h4 className="text-white font-semibold mb-3">other Pages</h4>
+            <h4 className="text-white font-semibold mb-4 border-b border-gray-700 pb-2">Other Pages</h4>
             <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-white">Donate us</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">Daily Drashan</a>
-              </li>
-              <li>
-                <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link to="/terms-n-conditions" className="hover:text-white">Terms of Service</Link>
-              </li>
-
+              <li><Link to="/donate" className="hover:text-indigo-400 transition-colors">Donate Us</Link></li>
+              <li><Link to="/darshan" className="hover:text-indigo-400 transition-colors">Daily Darshan</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-indigo-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-n-conditions" className="hover:text-indigo-400 transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
 
-        {/* Divider & Social Media */}
-        <div className="mt-8 border-t border-gray-700 pt-6 flex flex-col sm:flex-row justify-between items-center">
-          <span className="text-gray-400 text-sm">
-            © 2025 <a href="https://pagedone.io/" className="hover:text-white">ISKCON Bhusawal</a>. All rights reserved.
+        {/* Divider & Bottom Section */}
+        <div className="mt-10 border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center">
+          <span className="text-gray-500 text-sm text-center sm:text-left">
+            © {new Date().getFullYear()}{" "}
+            <Link to="/" className="hover:text-indigo-400 transition-colors font-medium">
+              ISKCON Bhusawal
+            </Link>. All rights reserved.
           </span>
 
-          <div className="flex space-x-4 mt-4 sm:mt-0">
-            <a href="#" className="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-full hover:bg-indigo-600">
-              <i className="fab fa-facebook-f text-white"></i>
+          {/* Social Icons */}
+          <div className="flex space-x-4 mt-5 sm:mt-0">
+            <a
+              href="https://www.facebook.com/Iskconbhusawal.ssrm/"
+              aria-label="Facebook"
+              target="_blank"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 transition-colors duration-300"
+            >
+              <FaFacebookF size={16} />
             </a>
-            <a href="#" className="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-full hover:bg-indigo-600">
-              <i className="fab fa-twitter text-white"></i>
+            {/* <a
+              href="#"
+              aria-label="Twitter"
+              target="_blank"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 transition-colors duration-300"
+            >
+              <FaTwitter size={16} />
+            </a> */}
+            <a
+              href="https://www.instagram.com/iskcon_bhusawal/?hl=en"
+              target="_blank"
+              aria-label="Instagram"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 transition-colors duration-300"
+            >
+              <FaInstagram size={16} />
             </a>
-            <a href="#" className="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-full hover:bg-indigo-600">
-              <i className="fab fa-instagram text-white"></i>
+            <a
+              href="https://www.youtube.com/@iskconbhusawal"
+              aria-label="YouTube"
+              target="_blank"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 transition-colors duration-300"
+            >
+              <FaYoutube size={16} />
             </a>
           </div>
         </div>

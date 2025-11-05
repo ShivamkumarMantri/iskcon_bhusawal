@@ -17,7 +17,7 @@ function Hero() {
       {/* Text Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
         <h1 className="text-4xl md:text-8xl font-bold drop-shadow-lg font-serif">
-          Welcome to <span className="text-cyan-300">ISKCON Bhusawal</span>
+          Welcome to <span className="text-[#eda73b]">ISKCON Bhusawal</span>
         </h1>
 
         <p className="text-xl md:text-6xl mt-4 drop-shadow-md font-dancing text-center">

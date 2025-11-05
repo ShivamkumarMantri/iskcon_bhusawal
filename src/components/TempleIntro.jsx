@@ -1,5 +1,6 @@
 import React from 'react';
 import img2 from '../assets/new_temple2.jpg'; // Update path if needed
+import { Link } from 'react-router-dom';
 
 function TempleIntro() {
   return (
@@ -17,7 +18,7 @@ function TempleIntro() {
           </p>
           <p className="text-base md:text-lg text-gray-600 lg:max-w-3xl lg:mx-auto">
             We conduct courses, seminars, and workshops for all — kids, youth, and families.
-            Dine at our international restaurant, celebrate your occasion at the temple, or
+            Dine at our Govinda's restaurant, celebrate your occasion at the temple, or
             join us for any of our spiritual tours. Let’s together enhance the divine dimension
             of our lives.
           </p>
@@ -39,6 +40,7 @@ function TempleIntro() {
                     in Bhusawal — a place to awaken spiritual joy and peace.
                   </p>
                 </div>
+                <Link to='/nav-mandir-nirman'>
                 <button className="self-start py-2 px-5 border border-white rounded-full text-sm text-white font-semibold flex items-center gap-2 transition-all duration-500 hover:bg-white hover:text-[#d1a664]">
                   View More
                   <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
@@ -51,6 +53,7 @@ function TempleIntro() {
                     />
                   </svg>
                 </button>
+                </Link>
               </div>
 
               {/* Image */}
@@ -72,6 +75,7 @@ function TempleIntro() {
             <p className="text-sm mb-8 text-white/90">
               Connect with us to gain the essence of Bhagavad-Gita & Srimad Bhagavatam.
             </p>
+            <Link to="/spiritual-study-center">
             <button className="py-2 px-5 border border-white rounded-full text-sm font-semibold flex items-center gap-2 transition-all duration-500 hover:bg-white hover:text-[#c2935a]">
               View More
               <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
@@ -84,6 +88,7 @@ function TempleIntro() {
                 />
               </svg>
             </button>
+            </Link>
           </div>
 
           <div className="bg-[#b3804f] rounded-2xl p-6 xl:p-8 text-white transition-all duration-500 hover:-translate-y-1 hover:shadow-lg">
@@ -93,6 +98,7 @@ function TempleIntro() {
             <p className="text-sm mb-8 text-white/90">
               Our courses nurture spiritual values and discipline in children from a young age.
             </p>
+            <Link to='/iys'>
             <button className="py-2 px-5 border border-white rounded-full text-sm font-semibold flex items-center gap-2 transition-all duration-500 hover:bg-white hover:text-[#b3804f]">
               View More
               <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
@@ -105,6 +111,7 @@ function TempleIntro() {
                 />
               </svg>
             </button>
+            </Link>
           </div>
         </div>
       </div>

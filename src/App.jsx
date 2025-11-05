@@ -14,6 +14,10 @@ import WeeklyPrograms from './Screens/WeeklyPrograms';
 import Activities from './Screens/Activities';
 import PrivacyPolicy from './Screens/PrivacyPolicy';
 import TermsConditions from './Screens/TermsConditions';
+import IYSDetailPage from './Screens/IYS';
+import SpiritualStudyCenter from './Screens/SpiritualStudyCenter';
+import NewTempleConstruction from './Screens/NewTempleConstruction';
+import Donation from './Screens/Donation';
 
 function App() {
     return (
@@ -32,6 +36,10 @@ function App() {
                     <Route path="/activities" element={<Activities />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                     <Route path="/terms-n-conditions" element={<TermsConditions />} />
+                    <Route path="/iys" element={<IYSDetailPage />} />
+                    <Route path="/spiritual-study-center" element={<SpiritualStudyCenter />} />
+                    <Route path="/nav-mandir-nirman" element={<NewTempleConstruction />} />
+                    <Route path="/donation" element={<Donation />} />
 
                     <Route path="*" element={<NotFound />} /> 
                 </Routes>
